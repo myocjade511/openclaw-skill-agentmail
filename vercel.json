@@ -3,5 +3,21 @@
   "public": true,
   "github": {
     "enabled": false
-  }
+  },
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/agentmail-skill.zip",
+      "dest": "/agentmail-skill.zip"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
