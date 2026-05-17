@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentMail Skill for OpenClaw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .icon {
+            font-size: 64px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning strong {
+            color: #856404;
+        }
+        .warning code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        .features {
+            margin: 25px 0;
+        }
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #555;
+        }
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #999;
+            font-size: 14px;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #333;
+        }
+        .correct {
+            color: #28a745;
+        }
+        .wrong {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">📧</div>
+            <h1>AgentMail Skill</h1>
+            <p class="subtitle">Send and receive emails programmatically with OpenClaw</p>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Critical Fix Applied:</strong><br>
+            When sending emails, use the <code>text</code> parameter, NOT <code>body</code>:
+            <div class="code-block">
+                <code>
+                    <span class="correct">✓ text: "Email body"</span> &nbsp;&nbsp;// CORRECT<br>
+                    <span class="wrong">✗ body: "Email body"</span> &nbsp;&nbsp;// WRONG - sends empty email
+                </code>
+            </div>
+        </div>
+
+        <div class="features">
+            <h3>Features</h3>
+            <ul>
+                <li>Create disposable email inboxes</li>
+                <li>Send emails programmatically</li>
+                <li>Receive and parse multipart emails</li>
+                <li>Automatic quoted-printable decoding</li>
+                <li>Full UTF-8 & emoji support 🎉</li>
+                <li>Wait for email replies</li>
+                <li>Reply and forward emails</li>
+            </ul>
+        </div>
+
+        <a href="agentmail-skill.zip" class="download-btn" download>
+            📦 Download Skill (ZIP)
+        </a>
+
+        <div class="footer">
+            <p>Version 1.0.0 • MIT License</p>
+            <p>Get your API key at <a href="https://agentmail.to" target="_blank">agentmail.to</a></p>
+        </div>
+    </div>
+</body>
+</html>

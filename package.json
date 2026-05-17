@@ -1,0 +1,22 @@
+{
+  "name": "openclaw-skill-agentmail",
+  "version": "1.0.0",
+  "description": "AgentMail skill for OpenClaw - Send and receive emails programmatically",
+  "type": "module",
+  "main": "scripts/agentmail-helper.mjs",
+  "scripts": {
+    "test": "node scripts/agentmail-helper.mjs list"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "agentmail",
+    "email",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "agentmail": "^1.0.0"
+  }
+}
